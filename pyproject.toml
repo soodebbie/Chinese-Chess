@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "chinese-chess"
+version = "0.1.0"
+description = "A simple Chinese Chess (Xiangqi) CLI game written in Python."
+authors = ["Your Name <you@example.com>"]
+
+packages = [
+  { include = "chinese_chess", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.2"
+
+[tool.poetry.scripts]
+chinese-chess = "chinese_chess.cli:main"
+chinese-chess-web = "chinese_chess.web:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
